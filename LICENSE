@@ -1,0 +1,17 @@
+The example diagrams, Mermaid sources (.mmd), exported images (.svg, .png), JSON files and documentation in this
+repository are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+Copyright 2026 the diagramgen.app team.
+
+You are free to share and adapt the material for any purpose, including commercially, as long as you give appropriate
+credit, provide a link to the license, and indicate if changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+Box wording is adapted from:
+- the PRISMA 2020 flow diagram templates — Page MJ, McKenzie JE, Bossuyt PM, et al. BMJ 2021;372:n71,
+  doi:10.1136/bmj.n71 — distributed under CC BY 4.0;
+- the CONSORT 2025 flow diagram — Hopewell S, Chan AW, Collins GS, et al. BMJ 2025;389:e081123,
+  doi:10.1136/bmj-2024-081123 — published open access under CC BY 4.0.
+Please cite those statements when you use the wording.

@@ -1,0 +1,288 @@
+{
+  "title": "CONSORT 2025 — three arms",
+  "variant": "Official CONSORT 2025 wording, one box per phase per arm (multi-arm trials have their own CONSORT extension)",
+  "standard": "CONSORT 2025 (Hopewell S et al. BMJ 2025;389:e081123, doi:10.1136/bmj-2024-081123)",
+  "source": "consort-2025-three-arm.mmd",
+  "exports": {
+    "svg": "consort-2025-three-arm.svg"
+  },
+  "boxes": [
+    {
+      "id": "A",
+      "label": "Assessed for eligibility (n = 655)",
+      "counts": [
+        {
+          "name": "Assessed for eligibility",
+          "n": 655
+        }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "Excluded (n = 295): not meeting inclusion criteria (n = 210), declined to participate (n = 62), other reasons (n = 23)",
+      "counts": [
+        {
+          "name": "Excluded",
+          "n": 295,
+          "breakdown": [
+            {
+              "name": "not meeting inclusion criteria",
+              "n": 210
+            },
+            {
+              "name": "declined to participate",
+              "n": 62
+            },
+            {
+              "name": "other reasons",
+              "n": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R",
+      "label": "Randomised (n = 360)",
+      "counts": [
+        {
+          "name": "Randomised",
+          "n": 360
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "label": "Allocated to low dose (n = 120): received (n = 118), did not receive (n = 2)",
+      "counts": [
+        {
+          "name": "Allocated to low dose",
+          "n": 120,
+          "breakdown": [
+            {
+              "name": "received",
+              "n": 118
+            },
+            {
+              "name": "did not receive",
+              "n": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "label": "Allocated to high dose (n = 120): received (n = 115), did not receive (n = 5)",
+      "counts": [
+        {
+          "name": "Allocated to high dose",
+          "n": 120,
+          "breakdown": [
+            {
+              "name": "received",
+              "n": 115
+            },
+            {
+              "name": "did not receive",
+              "n": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B3",
+      "label": "Allocated to placebo (n = 120): received (n = 119), did not receive (n = 1)",
+      "counts": [
+        {
+          "name": "Allocated to placebo",
+          "n": 120,
+          "breakdown": [
+            {
+              "name": "received",
+              "n": 119
+            },
+            {
+              "name": "did not receive",
+              "n": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "label": "Discontinued (n = 4); lost to follow-up for primary outcome (n = 6)",
+      "counts": [
+        {
+          "name": "Discontinued",
+          "n": 4
+        },
+        {
+          "name": "lost to follow-up for primary outcome",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "label": "Discontinued (n = 9); lost to follow-up for primary outcome (n = 8)",
+      "counts": [
+        {
+          "name": "Discontinued",
+          "n": 9
+        },
+        {
+          "name": "lost to follow-up for primary outcome",
+          "n": 8
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "label": "Discontinued (n = 2); lost to follow-up for primary outcome (n = 5)",
+      "counts": [
+        {
+          "name": "Discontinued",
+          "n": 2
+        },
+        {
+          "name": "lost to follow-up for primary outcome",
+          "n": 5
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "label": "Analysed for primary outcome (n = 113); excluded from analysis (n = 1)",
+      "counts": [
+        {
+          "name": "Analysed for primary outcome",
+          "n": 113
+        },
+        {
+          "name": "excluded from analysis",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "label": "Analysed for primary outcome (n = 110); excluded from analysis (n = 2)",
+      "counts": [
+        {
+          "name": "Analysed for primary outcome",
+          "n": 110
+        },
+        {
+          "name": "excluded from analysis",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "label": "Analysed for primary outcome (n = 115); excluded from analysis (n = 0)",
+      "counts": [
+        {
+          "name": "Analysed for primary outcome",
+          "n": 115
+        },
+        {
+          "name": "excluded from analysis",
+          "n": 0
+        }
+      ]
+    }
+  ],
+  "closure": {
+    "checks": [
+      {
+        "rule": "consort.randomised",
+        "severity": "hard",
+        "box": "Randomised [R]",
+        "calculation": "655 − 295 = 360",
+        "written": 360,
+        "expected": 360,
+        "result": "ok"
+      },
+      {
+        "rule": "consort.allocated",
+        "severity": "hard",
+        "box": "Randomised [R]",
+        "calculation": "120 + 120 + 120 = 360",
+        "written": 360,
+        "expected": 360,
+        "result": "ok"
+      },
+      {
+        "rule": "consort.analysed",
+        "severity": "soft",
+        "box": "Analysed for primary outcome [D1]",
+        "calculation": "120 − 6 − 1 = 113",
+        "written": 113,
+        "expected": 113,
+        "result": "ok"
+      },
+      {
+        "rule": "consort.analysed",
+        "severity": "soft",
+        "box": "Analysed for primary outcome [D2]",
+        "calculation": "120 − 8 − 2 = 110",
+        "written": 110,
+        "expected": 110,
+        "result": "ok"
+      },
+      {
+        "rule": "consort.analysed",
+        "severity": "soft",
+        "box": "Analysed for primary outcome [D3]",
+        "calculation": "120 − 5 − 0 = 115",
+        "written": 115,
+        "expected": 115,
+        "result": "ok"
+      },
+      {
+        "rule": "sum",
+        "severity": "hard",
+        "box": "Excluded [X]",
+        "calculation": "210 + 62 + 23 = 295",
+        "written": 295,
+        "expected": 295,
+        "result": "ok"
+      },
+      {
+        "rule": "sum",
+        "severity": "hard",
+        "box": "Allocated to low dose [B1]",
+        "calculation": "118 + 2 = 120",
+        "written": 120,
+        "expected": 120,
+        "result": "ok"
+      },
+      {
+        "rule": "sum",
+        "severity": "hard",
+        "box": "Allocated to high dose [B2]",
+        "calculation": "115 + 5 = 120",
+        "written": 120,
+        "expected": 120,
+        "result": "ok"
+      },
+      {
+        "rule": "sum",
+        "severity": "hard",
+        "box": "Allocated to placebo [B3]",
+        "calculation": "119 + 1 = 120",
+        "written": 120,
+        "expected": 120,
+        "result": "ok"
+      }
+    ],
+    "pending": 0,
+    "allClose": true
+  },
+  "madeWith": "Made with diagramgen.app — maintained by the diagramgen.app team",
+  "exportedOn": "2026-10-01"
+}

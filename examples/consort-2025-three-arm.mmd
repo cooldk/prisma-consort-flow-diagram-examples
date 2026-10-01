@@ -1,0 +1,32 @@
+flowchart TD
+  subgraph enrol["Enrolment"]
+    A["Assessed for eligibility (n = 655)"]
+    X["Excluded (n = 295): not meeting inclusion criteria (n = 210), declined to participate (n = 62), other reasons (n = 23)"]
+    R["Randomised (n = 360)"]
+  end
+  subgraph alloc["Allocation"]
+    B1["Allocated to low dose (n = 120): received (n = 118), did not receive (n = 2)"]
+    B2["Allocated to high dose (n = 120): received (n = 115), did not receive (n = 5)"]
+    B3["Allocated to placebo (n = 120): received (n = 119), did not receive (n = 1)"]
+  end
+  subgraph follow["Follow-up"]
+    C1["Discontinued (n = 4); lost to follow-up for primary outcome (n = 6)"]
+    C2["Discontinued (n = 9); lost to follow-up for primary outcome (n = 8)"]
+    C3["Discontinued (n = 2); lost to follow-up for primary outcome (n = 5)"]
+  end
+  subgraph anal["Analysis"]
+    D1["Analysed for primary outcome (n = 113); excluded from analysis (n = 1)"]
+    D2["Analysed for primary outcome (n = 110); excluded from analysis (n = 2)"]
+    D3["Analysed for primary outcome (n = 115); excluded from analysis (n = 0)"]
+  end
+  A --> X
+  A --> R
+  R --> B1
+  R --> B2
+  R --> B3
+  B1 --> C1
+  B2 --> C2
+  B3 --> C3
+  C1 --> D1
+  C2 --> D2
+  C3 --> D3

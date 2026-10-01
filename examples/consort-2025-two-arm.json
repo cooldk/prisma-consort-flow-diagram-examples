@@ -1,0 +1,223 @@
+{
+  "title": "CONSORT 2025 — two-arm parallel-group trial",
+  "variant": "Official CONSORT 2025 flow diagram wording",
+  "standard": "CONSORT 2025 (Hopewell S et al. BMJ 2025;389:e081123, doi:10.1136/bmj-2024-081123)",
+  "source": "consort-2025-two-arm.mmd",
+  "exports": {
+    "svg": "consort-2025-two-arm.svg",
+    "png": "consort-2025-two-arm.png"
+  },
+  "boxes": [
+    {
+      "id": "A",
+      "label": "Assessed for eligibility (n = 412)",
+      "counts": [
+        {
+          "name": "Assessed for eligibility",
+          "n": 412
+        }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "Excluded (n = 172): not meeting inclusion criteria (n = 118), declined to participate (n = 41), other reasons (n = 13)",
+      "counts": [
+        {
+          "name": "Excluded",
+          "n": 172,
+          "breakdown": [
+            {
+              "name": "not meeting inclusion criteria",
+              "n": 118
+            },
+            {
+              "name": "declined to participate",
+              "n": 41
+            },
+            {
+              "name": "other reasons",
+              "n": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R",
+      "label": "Randomised (n = 240)",
+      "counts": [
+        {
+          "name": "Randomised",
+          "n": 240
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "label": "Allocated to intervention (n = 120): received allocated intervention (n = 116), did not receive it (n = 4)",
+      "counts": [
+        {
+          "name": "Allocated to intervention",
+          "n": 120,
+          "breakdown": [
+            {
+              "name": "received allocated intervention",
+              "n": 116
+            },
+            {
+              "name": "did not receive it",
+              "n": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "label": "Allocated to control (n = 120): received allocated intervention (n = 119), did not receive it (n = 1)",
+      "counts": [
+        {
+          "name": "Allocated to control",
+          "n": 120,
+          "breakdown": [
+            {
+              "name": "received allocated intervention",
+              "n": 119
+            },
+            {
+              "name": "did not receive it",
+              "n": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "label": "Discontinued intervention (n = 6); lost to follow-up for primary outcome (n = 5)",
+      "counts": [
+        {
+          "name": "Discontinued intervention",
+          "n": 6
+        },
+        {
+          "name": "lost to follow-up for primary outcome",
+          "n": 5
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "label": "Discontinued intervention (n = 3); lost to follow-up for primary outcome (n = 7)",
+      "counts": [
+        {
+          "name": "Discontinued intervention",
+          "n": 3
+        },
+        {
+          "name": "lost to follow-up for primary outcome",
+          "n": 7
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "label": "Analysed for primary outcome (n = 113); excluded from analysis (n = 2)",
+      "counts": [
+        {
+          "name": "Analysed for primary outcome",
+          "n": 113
+        },
+        {
+          "name": "excluded from analysis",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "label": "Analysed for primary outcome (n = 112); excluded from analysis (n = 1)",
+      "counts": [
+        {
+          "name": "Analysed for primary outcome",
+          "n": 112
+        },
+        {
+          "name": "excluded from analysis",
+          "n": 1
+        }
+      ]
+    }
+  ],
+  "closure": {
+    "checks": [
+      {
+        "rule": "consort.randomised",
+        "severity": "hard",
+        "box": "Randomised [R]",
+        "calculation": "412 − 172 = 240",
+        "written": 240,
+        "expected": 240,
+        "result": "ok"
+      },
+      {
+        "rule": "consort.allocated",
+        "severity": "hard",
+        "box": "Randomised [R]",
+        "calculation": "120 + 120 = 240",
+        "written": 240,
+        "expected": 240,
+        "result": "ok"
+      },
+      {
+        "rule": "consort.analysed",
+        "severity": "soft",
+        "box": "Analysed for primary outcome [D1]",
+        "calculation": "120 − 5 − 2 = 113",
+        "written": 113,
+        "expected": 113,
+        "result": "ok"
+      },
+      {
+        "rule": "consort.analysed",
+        "severity": "soft",
+        "box": "Analysed for primary outcome [D2]",
+        "calculation": "120 − 7 − 1 = 112",
+        "written": 112,
+        "expected": 112,
+        "result": "ok"
+      },
+      {
+        "rule": "sum",
+        "severity": "hard",
+        "box": "Excluded [X]",
+        "calculation": "118 + 41 + 13 = 172",
+        "written": 172,
+        "expected": 172,
+        "result": "ok"
+      },
+      {
+        "rule": "sum",
+        "severity": "hard",
+        "box": "Allocated to intervention [B1]",
+        "calculation": "116 + 4 = 120",
+        "written": 120,
+        "expected": 120,
+        "result": "ok"
+      },
+      {
+        "rule": "sum",
+        "severity": "hard",
+        "box": "Allocated to control [B2]",
+        "calculation": "119 + 1 = 120",
+        "written": 120,
+        "expected": 120,
+        "result": "ok"
+      }
+    ],
+    "pending": 0,
+    "allClose": true
+  },
+  "madeWith": "Made with diagramgen.app — maintained by the diagramgen.app team",
+  "exportedOn": "2026-10-01"
+}

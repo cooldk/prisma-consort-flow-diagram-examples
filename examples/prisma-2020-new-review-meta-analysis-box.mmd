@@ -1,0 +1,26 @@
+flowchart TD
+  subgraph ident["Identification"]
+    A["Records identified from: databases (n = 2,100)"]
+    B["Records removed before screening: duplicate records (n = 480)"]
+  end
+  subgraph screen["Screening"]
+    C["Records screened (n = 1,620)"]
+    D["Records excluded (n = 1,330)"]
+    E["Reports sought for retrieval (n = 290)"]
+    F["Reports not retrieved (n = 18)"]
+    G["Reports assessed for eligibility (n = 272)"]
+    H["Reports excluded: no control group (n = 122), outcome not reported (n = 96)"]
+  end
+  subgraph incl["Included"]
+    I["Studies included in review (n = 51); reports of included studies (n = 54)"]
+    J["Studies included in meta-analysis (n = 38)"]
+  end
+  A --> B
+  A --> C
+  C --> D
+  C --> E
+  E --> F
+  E --> G
+  G --> H
+  G --> I
+  I --> J

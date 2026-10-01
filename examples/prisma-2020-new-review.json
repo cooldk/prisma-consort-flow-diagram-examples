@@ -1,0 +1,197 @@
+{
+  "title": "PRISMA 2020 — new review, databases and registers",
+  "variant": "Official template: new systematic reviews, databases and registers only",
+  "standard": "PRISMA 2020 (Page MJ et al. BMJ 2021;372:n71, doi:10.1136/bmj.n71)",
+  "source": "prisma-2020-new-review.mmd",
+  "exports": {
+    "svg": "prisma-2020-new-review.svg",
+    "png": "prisma-2020-new-review.png"
+  },
+  "boxes": [
+    {
+      "id": "A",
+      "label": "Records identified from: databases (n = 1,180), registers (n = 60)",
+      "counts": [
+        {
+          "name": "Records identified from",
+          "n": 1240,
+          "sumOf": [
+            {
+              "name": "databases",
+              "n": 1180
+            },
+            {
+              "name": "registers",
+              "n": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "label": "Records removed before screening: duplicate records (n = 290), marked as ineligible by automation tools (n = 0), removed for other reasons (n = 20)",
+      "counts": [
+        {
+          "name": "Records removed before screening",
+          "n": 310,
+          "sumOf": [
+            {
+              "name": "duplicate records",
+              "n": 290
+            },
+            {
+              "name": "marked as ineligible by automation tools",
+              "n": 0
+            },
+            {
+              "name": "removed for other reasons",
+              "n": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "Records screened (n = 930)",
+      "counts": [
+        {
+          "name": "Records screened",
+          "n": 930
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "label": "Records excluded (n = 720)",
+      "counts": [
+        {
+          "name": "Records excluded",
+          "n": 720
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "label": "Reports sought for retrieval (n = 210)",
+      "counts": [
+        {
+          "name": "Reports sought for retrieval",
+          "n": 210
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "Reports not retrieved (n = 15)",
+      "counts": [
+        {
+          "name": "Reports not retrieved",
+          "n": 15
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "label": "Reports assessed for eligibility (n = 195)",
+      "counts": [
+        {
+          "name": "Reports assessed for eligibility",
+          "n": 195
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "Reports excluded: wrong population (n = 61), wrong intervention (n = 48), wrong outcome (n = 44)",
+      "counts": [
+        {
+          "name": "Reports excluded",
+          "n": 153,
+          "sumOf": [
+            {
+              "name": "wrong population",
+              "n": 61
+            },
+            {
+              "name": "wrong intervention",
+              "n": 48
+            },
+            {
+              "name": "wrong outcome",
+              "n": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I",
+      "label": "Studies included in review (n = 38); reports of included studies (n = 42)",
+      "counts": [
+        {
+          "name": "Studies included in review",
+          "n": 38
+        },
+        {
+          "name": "reports of included studies",
+          "n": 42
+        }
+      ]
+    }
+  ],
+  "closure": {
+    "checks": [
+      {
+        "rule": "prisma.screened",
+        "severity": "hard",
+        "box": "Records screened [C]",
+        "calculation": "1,240 − 310 = 930",
+        "written": 930,
+        "expected": 930,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.sought",
+        "severity": "soft",
+        "box": "Reports sought for retrieval [E]",
+        "calculation": "930 − 720 = 210",
+        "written": 210,
+        "expected": 210,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.assessed",
+        "severity": "hard",
+        "box": "Reports assessed for eligibility [G]",
+        "calculation": "210 − 15 = 195",
+        "written": 195,
+        "expected": 195,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.includedReports",
+        "severity": "hard",
+        "box": "Reports of included studies [I]",
+        "calculation": "195 − 153 = 42",
+        "written": 42,
+        "expected": 42,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.studiesLeReports",
+        "severity": "hard",
+        "box": "Studies included in review [I]",
+        "calculation": "38 ≤ 42",
+        "written": 38,
+        "expected": 42,
+        "result": "ok"
+      }
+    ],
+    "pending": 0,
+    "allClose": true
+  },
+  "madeWith": "Made with diagramgen.app — maintained by the diagramgen.app team",
+  "exportedOn": "2026-10-01"
+}

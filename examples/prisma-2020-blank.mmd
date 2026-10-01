@@ -1,0 +1,24 @@
+flowchart TD
+  subgraph ident["Identification"]
+    A["Records identified from: databases (n = ), registers (n = )"]
+    B["Records removed before screening: duplicate records (n = ), marked as ineligible by automation tools (n = ), removed for other reasons (n = )"]
+  end
+  subgraph screen["Screening"]
+    C["Records screened (n = )"]
+    D["Records excluded (n = )"]
+    E["Reports sought for retrieval (n = )"]
+    F["Reports not retrieved (n = )"]
+    G["Reports assessed for eligibility (n = )"]
+    H["Reports excluded: reason 1 (n = ), reason 2 (n = ), reason 3 (n = )"]
+  end
+  subgraph incl["Included"]
+    I["Studies included in review (n = ); reports of included studies (n = )"]
+  end
+  A --> B
+  A --> C
+  C --> D
+  C --> E
+  E --> F
+  E --> G
+  G --> H
+  G --> I

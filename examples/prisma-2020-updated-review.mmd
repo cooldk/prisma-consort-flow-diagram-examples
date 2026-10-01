@@ -1,0 +1,30 @@
+flowchart TD
+  subgraph prev["Previous studies"]
+    P["Studies included in previous version of review (n = 25); reports of studies included in previous version of review (n = 31)"]
+  end
+  subgraph ident["Identification"]
+    A["Records identified from: databases (n = 640), registers (n = 35)"]
+    B["Records removed before screening: duplicate records (n = 160), marked as ineligible by automation tools (n = 0), removed for other reasons (n = 5)"]
+  end
+  subgraph screen["Screening"]
+    C["Records screened (n = 510)"]
+    D["Records excluded (n = 452)"]
+    E["Reports sought for retrieval (n = 58)"]
+    F["Reports not retrieved (n = 4)"]
+    G["Reports assessed for eligibility (n = 54)"]
+    H["Reports excluded: wrong study design (n = 22), wrong population (n = 17), wrong outcome (n = 6)"]
+  end
+  subgraph incl["Included"]
+    I["New studies included in review (n = 8); reports of new included studies (n = 9)"]
+    T["Total studies included in review (n = 33); reports of total included studies (n = 40)"]
+  end
+  A --> B
+  A --> C
+  C --> D
+  C --> E
+  E --> F
+  E --> G
+  G --> H
+  G --> I
+  I --> T
+  P --> T

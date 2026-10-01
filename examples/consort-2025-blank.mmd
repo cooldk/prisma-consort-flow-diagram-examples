@@ -1,0 +1,26 @@
+flowchart TD
+  subgraph enrol["Enrolment"]
+    A["Assessed for eligibility (n = )"]
+    X["Excluded (n = ): not meeting inclusion criteria (n = ), declined to participate (n = ), other reasons (n = )"]
+    R["Randomised (n = )"]
+  end
+  subgraph alloc["Allocation"]
+    B1["Allocated to intervention (n = ): received allocated intervention (n = ), did not receive it, give reasons (n = )"]
+    B2["Allocated to comparator (n = ): received allocated intervention (n = ), did not receive it, give reasons (n = )"]
+  end
+  subgraph follow["Follow-up"]
+    C1["Discontinued intervention, give reasons (n = ); lost to follow-up for primary outcome, give reasons (n = )"]
+    C2["Discontinued intervention, give reasons (n = ); lost to follow-up for primary outcome, give reasons (n = )"]
+  end
+  subgraph anal["Analysis"]
+    D1["Analysed for primary outcome (n = ); excluded from analysis, give reasons (n = )"]
+    D2["Analysed for primary outcome (n = ); excluded from analysis, give reasons (n = )"]
+  end
+  A --> X
+  A --> R
+  R --> B1
+  R --> B2
+  B1 --> C1
+  B2 --> C2
+  C1 --> D1
+  C2 --> D2

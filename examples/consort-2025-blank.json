@@ -1,0 +1,158 @@
+{
+  "title": "CONSORT 2025 — blank template, two arms",
+  "variant": "Official CONSORT 2025 wording, counts left blank",
+  "standard": "CONSORT 2025 (Hopewell S et al. BMJ 2025;389:e081123, doi:10.1136/bmj-2024-081123)",
+  "source": "consort-2025-blank.mmd",
+  "exports": {
+    "svg": "consort-2025-blank.svg"
+  },
+  "boxes": [
+    {
+      "id": "A",
+      "label": "Assessed for eligibility (n = )",
+      "counts": [
+        {
+          "name": "Assessed for eligibility",
+          "n": null
+        }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "Excluded (n = ): not meeting inclusion criteria (n = ), declined to participate (n = ), other reasons (n = )",
+      "counts": [
+        {
+          "name": "Excluded",
+          "n": null,
+          "breakdown": [
+            {
+              "name": "not meeting inclusion criteria",
+              "n": null
+            },
+            {
+              "name": "declined to participate",
+              "n": null
+            },
+            {
+              "name": "other reasons",
+              "n": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R",
+      "label": "Randomised (n = )",
+      "counts": [
+        {
+          "name": "Randomised",
+          "n": null
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "label": "Allocated to intervention (n = ): received allocated intervention (n = ), did not receive it, give reasons (n = )",
+      "counts": [
+        {
+          "name": "Allocated to intervention",
+          "n": null,
+          "breakdown": [
+            {
+              "name": "received allocated intervention",
+              "n": null
+            },
+            {
+              "name": "did not receive it, give reasons",
+              "n": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "label": "Allocated to comparator (n = ): received allocated intervention (n = ), did not receive it, give reasons (n = )",
+      "counts": [
+        {
+          "name": "Allocated to comparator",
+          "n": null,
+          "breakdown": [
+            {
+              "name": "received allocated intervention",
+              "n": null
+            },
+            {
+              "name": "did not receive it, give reasons",
+              "n": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "label": "Discontinued intervention, give reasons (n = ); lost to follow-up for primary outcome, give reasons (n = )",
+      "counts": [
+        {
+          "name": "Discontinued intervention, give reasons",
+          "n": null
+        },
+        {
+          "name": "lost to follow-up for primary outcome, give reasons",
+          "n": null
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "label": "Discontinued intervention, give reasons (n = ); lost to follow-up for primary outcome, give reasons (n = )",
+      "counts": [
+        {
+          "name": "Discontinued intervention, give reasons",
+          "n": null
+        },
+        {
+          "name": "lost to follow-up for primary outcome, give reasons",
+          "n": null
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "label": "Analysed for primary outcome (n = ); excluded from analysis, give reasons (n = )",
+      "counts": [
+        {
+          "name": "Analysed for primary outcome",
+          "n": null
+        },
+        {
+          "name": "excluded from analysis, give reasons",
+          "n": null
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "label": "Analysed for primary outcome (n = ); excluded from analysis, give reasons (n = )",
+      "counts": [
+        {
+          "name": "Analysed for primary outcome",
+          "n": null
+        },
+        {
+          "name": "excluded from analysis, give reasons",
+          "n": null
+        }
+      ]
+    }
+  ],
+  "closure": {
+    "checks": [],
+    "pending": 7,
+    "allClose": true
+  },
+  "madeWith": "Made with diagramgen.app — maintained by the diagramgen.app team",
+  "exportedOn": "2026-10-01"
+}

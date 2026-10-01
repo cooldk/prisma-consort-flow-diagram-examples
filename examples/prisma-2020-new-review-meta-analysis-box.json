@@ -1,0 +1,199 @@
+{
+  "title": "PRISMA 2020 — new review with an extra meta-analysis box",
+  "variant": "Not an official template: the studies-in-meta-analysis box is an addition (none of the four official templates has it)",
+  "standard": "PRISMA 2020 (Page MJ et al. BMJ 2021;372:n71, doi:10.1136/bmj.n71)",
+  "source": "prisma-2020-new-review-meta-analysis-box.mmd",
+  "exports": {
+    "svg": "prisma-2020-new-review-meta-analysis-box.svg"
+  },
+  "boxes": [
+    {
+      "id": "A",
+      "label": "Records identified from: databases (n = 2,100)",
+      "counts": [
+        {
+          "name": "Records identified from",
+          "n": 2100,
+          "sumOf": [
+            {
+              "name": "databases",
+              "n": 2100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "label": "Records removed before screening: duplicate records (n = 480)",
+      "counts": [
+        {
+          "name": "Records removed before screening",
+          "n": 480,
+          "sumOf": [
+            {
+              "name": "duplicate records",
+              "n": 480
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "Records screened (n = 1,620)",
+      "counts": [
+        {
+          "name": "Records screened",
+          "n": 1620
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "label": "Records excluded (n = 1,330)",
+      "counts": [
+        {
+          "name": "Records excluded",
+          "n": 1330
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "label": "Reports sought for retrieval (n = 290)",
+      "counts": [
+        {
+          "name": "Reports sought for retrieval",
+          "n": 290
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "Reports not retrieved (n = 18)",
+      "counts": [
+        {
+          "name": "Reports not retrieved",
+          "n": 18
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "label": "Reports assessed for eligibility (n = 272)",
+      "counts": [
+        {
+          "name": "Reports assessed for eligibility",
+          "n": 272
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "Reports excluded: no control group (n = 122), outcome not reported (n = 96)",
+      "counts": [
+        {
+          "name": "Reports excluded",
+          "n": 218,
+          "sumOf": [
+            {
+              "name": "no control group",
+              "n": 122
+            },
+            {
+              "name": "outcome not reported",
+              "n": 96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I",
+      "label": "Studies included in review (n = 51); reports of included studies (n = 54)",
+      "counts": [
+        {
+          "name": "Studies included in review",
+          "n": 51
+        },
+        {
+          "name": "reports of included studies",
+          "n": 54
+        }
+      ]
+    },
+    {
+      "id": "J",
+      "label": "Studies included in meta-analysis (n = 38)",
+      "counts": [
+        {
+          "name": "Studies included in meta-analysis",
+          "n": 38
+        }
+      ]
+    }
+  ],
+  "closure": {
+    "checks": [
+      {
+        "rule": "prisma.screened",
+        "severity": "hard",
+        "box": "Records screened [C]",
+        "calculation": "2,100 − 480 = 1,620",
+        "written": 1620,
+        "expected": 1620,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.sought",
+        "severity": "soft",
+        "box": "Reports sought for retrieval [E]",
+        "calculation": "1,620 − 1,330 = 290",
+        "written": 290,
+        "expected": 290,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.assessed",
+        "severity": "hard",
+        "box": "Reports assessed for eligibility [G]",
+        "calculation": "290 − 18 = 272",
+        "written": 272,
+        "expected": 272,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.includedReports",
+        "severity": "hard",
+        "box": "Reports of included studies [I]",
+        "calculation": "272 − 218 = 54",
+        "written": 54,
+        "expected": 54,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.studiesLeReports",
+        "severity": "hard",
+        "box": "Studies included in review [I]",
+        "calculation": "51 ≤ 54",
+        "written": 51,
+        "expected": 54,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.metaLeIncluded",
+        "severity": "hard",
+        "box": "Studies included in meta-analysis [J]",
+        "calculation": "38 ≤ 51",
+        "written": 38,
+        "expected": 51,
+        "result": "ok"
+      }
+    ],
+    "pending": 0,
+    "allClose": true
+  },
+  "madeWith": "Made with diagramgen.app — maintained by the diagramgen.app team",
+  "exportedOn": "2026-10-01"
+}

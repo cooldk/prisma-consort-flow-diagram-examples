@@ -1,0 +1,34 @@
+flowchart TD
+  subgraph ident["Identification"]
+    A["Records identified from: databases (n = 1,180), registers (n = 60)"]
+    B["Records removed before screening: duplicate records (n = 290), marked as ineligible by automation tools (n = 0), removed for other reasons (n = 20)"]
+    K["Other methods — records identified from: websites (n = 14), organisations (n = 6), citation searching (n = 23)"]
+  end
+  subgraph screen["Screening"]
+    C["Records screened (n = 930)"]
+    D["Records excluded (n = 720)"]
+    E["Reports sought for retrieval (n = 210)"]
+    F["Reports not retrieved (n = 15)"]
+    G["Reports assessed for eligibility (n = 195)"]
+    H["Reports excluded: wrong population (n = 61), wrong intervention (n = 48), wrong outcome (n = 44)"]
+    L["Other methods — reports sought for retrieval (n = 43)"]
+    M["Reports not retrieved (n = 5)"]
+    N["Reports assessed for eligibility (n = 38)"]
+    O["Reports excluded: wrong population (n = 20), no comparison group (n = 11)"]
+  end
+  subgraph incl["Included"]
+    I["Studies included in review (n = 44); reports of included studies (n = 49)"]
+  end
+  A --> B
+  A --> C
+  C --> D
+  C --> E
+  E --> F
+  E --> G
+  G --> H
+  G --> I
+  K --> L
+  L --> M
+  L --> N
+  N --> O
+  N --> I

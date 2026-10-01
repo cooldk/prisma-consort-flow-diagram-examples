@@ -1,0 +1,325 @@
+{
+  "title": "PRISMA 2020 — updated review, databases, registers and other sources",
+  "variant": "Official template: updated systematic reviews, databases, registers and other sources",
+  "standard": "PRISMA 2020 (Page MJ et al. BMJ 2021;372:n71, doi:10.1136/bmj.n71)",
+  "source": "prisma-2020-updated-review-other-sources.mmd",
+  "exports": {
+    "svg": "prisma-2020-updated-review-other-sources.svg"
+  },
+  "boxes": [
+    {
+      "id": "P",
+      "label": "Studies included in previous version of review (n = 25); reports of studies included in previous version of review (n = 31)",
+      "counts": [
+        {
+          "name": "Studies included in previous version of review",
+          "n": 25
+        },
+        {
+          "name": "reports of studies included in previous version of review",
+          "n": 31
+        }
+      ]
+    },
+    {
+      "id": "A",
+      "label": "Records identified from: databases (n = 640), registers (n = 35)",
+      "counts": [
+        {
+          "name": "Records identified from",
+          "n": 675,
+          "sumOf": [
+            {
+              "name": "databases",
+              "n": 640
+            },
+            {
+              "name": "registers",
+              "n": 35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "label": "Records removed before screening: duplicate records (n = 160), marked as ineligible by automation tools (n = 0), removed for other reasons (n = 5)",
+      "counts": [
+        {
+          "name": "Records removed before screening",
+          "n": 165,
+          "sumOf": [
+            {
+              "name": "duplicate records",
+              "n": 160
+            },
+            {
+              "name": "marked as ineligible by automation tools",
+              "n": 0
+            },
+            {
+              "name": "removed for other reasons",
+              "n": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "K",
+      "label": "Other methods — records identified from: websites (n = 9), organisations (n = 3), citation searching (n = 14)",
+      "counts": [
+        {
+          "name": "Other methods — records identified from",
+          "n": 26,
+          "sumOf": [
+            {
+              "name": "websites",
+              "n": 9
+            },
+            {
+              "name": "organisations",
+              "n": 3
+            },
+            {
+              "name": "citation searching",
+              "n": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "Records screened (n = 510)",
+      "counts": [
+        {
+          "name": "Records screened",
+          "n": 510
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "label": "Records excluded (n = 452)",
+      "counts": [
+        {
+          "name": "Records excluded",
+          "n": 452
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "label": "Reports sought for retrieval (n = 58)",
+      "counts": [
+        {
+          "name": "Reports sought for retrieval",
+          "n": 58
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "Reports not retrieved (n = 4)",
+      "counts": [
+        {
+          "name": "Reports not retrieved",
+          "n": 4
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "label": "Reports assessed for eligibility (n = 54)",
+      "counts": [
+        {
+          "name": "Reports assessed for eligibility",
+          "n": 54
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "Reports excluded: wrong study design (n = 22), wrong population (n = 17), wrong outcome (n = 6)",
+      "counts": [
+        {
+          "name": "Reports excluded",
+          "n": 45,
+          "sumOf": [
+            {
+              "name": "wrong study design",
+              "n": 22
+            },
+            {
+              "name": "wrong population",
+              "n": 17
+            },
+            {
+              "name": "wrong outcome",
+              "n": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L",
+      "label": "Other methods — reports sought for retrieval (n = 26)",
+      "counts": [
+        {
+          "name": "Other methods — reports sought for retrieval",
+          "n": 26
+        }
+      ]
+    },
+    {
+      "id": "M",
+      "label": "Reports not retrieved (n = 2)",
+      "counts": [
+        {
+          "name": "Reports not retrieved",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "id": "N",
+      "label": "Reports assessed for eligibility (n = 24)",
+      "counts": [
+        {
+          "name": "Reports assessed for eligibility",
+          "n": 24
+        }
+      ]
+    },
+    {
+      "id": "O",
+      "label": "Reports excluded: wrong population (n = 15), wrong outcome (n = 6)",
+      "counts": [
+        {
+          "name": "Reports excluded",
+          "n": 21,
+          "sumOf": [
+            {
+              "name": "wrong population",
+              "n": 15
+            },
+            {
+              "name": "wrong outcome",
+              "n": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I",
+      "label": "New studies included in review (n = 11); reports of new included studies (n = 12)",
+      "counts": [
+        {
+          "name": "New studies included in review",
+          "n": 11
+        },
+        {
+          "name": "reports of new included studies",
+          "n": 12
+        }
+      ]
+    },
+    {
+      "id": "T",
+      "label": "Total studies included in review (n = 36); reports of total included studies (n = 43)",
+      "counts": [
+        {
+          "name": "Total studies included in review",
+          "n": 36
+        },
+        {
+          "name": "reports of total included studies",
+          "n": 43
+        }
+      ]
+    }
+  ],
+  "closure": {
+    "checks": [
+      {
+        "rule": "prisma.screened",
+        "severity": "hard",
+        "box": "Records screened [C]",
+        "calculation": "675 − 165 = 510",
+        "written": 510,
+        "expected": 510,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.sought",
+        "severity": "soft",
+        "box": "Reports sought for retrieval [E]",
+        "calculation": "510 − 452 = 58",
+        "written": 58,
+        "expected": 58,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.assessed",
+        "severity": "hard",
+        "box": "Reports assessed for eligibility [G]",
+        "calculation": "58 − 4 = 54",
+        "written": 54,
+        "expected": 54,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.assessedOther",
+        "severity": "hard",
+        "box": "Reports assessed for eligibility [N]",
+        "calculation": "26 − 2 = 24",
+        "written": 24,
+        "expected": 24,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.includedReports",
+        "severity": "hard",
+        "box": "Reports of new included studies [I]",
+        "calculation": "54 − 45 + 24 − 21 = 12",
+        "written": 12,
+        "expected": 12,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.studiesLeReports",
+        "severity": "hard",
+        "box": "New studies included in review [I]",
+        "calculation": "11 ≤ 12",
+        "written": 11,
+        "expected": 12,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.totalStudies",
+        "severity": "hard",
+        "box": "Total studies included in review [T]",
+        "calculation": "25 + 11 = 36",
+        "written": 36,
+        "expected": 36,
+        "result": "ok"
+      },
+      {
+        "rule": "prisma.totalReports",
+        "severity": "hard",
+        "box": "Reports of total included studies [T]",
+        "calculation": "31 + 12 = 43",
+        "written": 43,
+        "expected": 43,
+        "result": "ok"
+      }
+    ],
+    "pending": 0,
+    "allClose": true
+  },
+  "madeWith": "Made with diagramgen.app — maintained by the diagramgen.app team",
+  "exportedOn": "2026-10-01"
+}
